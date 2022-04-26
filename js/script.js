@@ -47,7 +47,7 @@ function setMenuListener() {
 setMenuListener();
 
 
-const heroSwiper = new Swiper('.hero__swiper', {
+const heroSwiper = new Swiper(".hero-swiper", {
   allowTouchMove: false,
   loop: true,
   effect: 'fade',
@@ -58,7 +58,7 @@ const heroSwiper = new Swiper('.hero__swiper', {
 });
 
 
-document.querySelector(".nav__burger").addEventListener("click", function () {
+document.querySelector(".header__burger").addEventListener("click", function () {
   document.querySelector(".nav").classList.add("active");
   document.querySelector("body").classList.add("active");
 })
@@ -66,8 +66,6 @@ document.querySelector(".header__nav-close").addEventListener("click", function 
   document.querySelector(".nav").classList.remove("active");
   document.querySelector("body").classList.remove("active");
 })
-
-
 
 document.querySelectorAll(".nav__list-item").forEach(element => {
   element.addEventListener("click", function () {
@@ -85,9 +83,6 @@ document.querySelector(".header__btn-close").addEventListener("click", function 
   document.querySelector(".header__form").classList.remove("active");
 })
 
-
-
-
 const element = document.querySelector('.gallery__select');
 const choices = new Choices(element, {
   searchEnabled: false,
@@ -95,7 +90,6 @@ const choices = new Choices(element, {
 
 
 const gallerySwiper = new Swiper('.gallery-slides-container', {
-
   pagination: {
     el: ".gallery .gallery-swiper-pagination",
     type: "fraction"
@@ -112,7 +106,7 @@ const gallerySwiper = new Swiper('.gallery-slides-container', {
       spaceBetween: 10
     },
 
-    662: {
+    577: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34
@@ -156,7 +150,6 @@ const gallerySwiper = new Swiper('.gallery-slides-container', {
       });
     }
   }
-
 })
 
 $(".catalog__accordion").accordion({
@@ -167,14 +160,13 @@ document.querySelectorAll('.catalog__tabs-nav-btn').forEach(function (tabsBtn) {
   tabsBtn.addEventListener('click', function (e) {
     const path = e.currentTarget.dataset.path;
     document.querySelectorAll('.catalog__tabs-nav-btn').forEach(function (btn) {
-      btn.classList.remove('tabs-nav-btn--active')
+      btn.classList.remove('catalog__tabs-nav-btn--active')
     });
-    e.currentTarget.classList.add('tabs-nav-btn--active');
+    e.currentTarget.classList.add('catalog__tabs-nav-btn--active');
     document.querySelectorAll('.catalog__tabs-item').forEach(function (tabsBtn) {
-      tabsBtn.classList.remove('tabs-item--active')
+      tabsBtn.classList.remove('catalog__tabs-item--active')
     });
-
-    document.querySelector(`[data-target="${path}"]`).classList.add('tabs-item--active');
+    document.querySelector(`[data-target="${path}"]`).classList.add('catalog__tabs-item--active');
   });
 });
 
@@ -203,7 +195,7 @@ const projectsSwiper = new Swiper('.projects-slides-container', {
       spaceBetween: 10
     },
 
-    662: {
+    577: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34
@@ -274,7 +266,7 @@ const eventsSwiper = new Swiper('.events-slides-container', {
       spaceBetween: 10
     },
 
-    662: {
+    577: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 34
@@ -296,9 +288,9 @@ const eventsSwiper = new Swiper('.events-slides-container', {
   keyboard: {
     enabled: true,
     onlyInViewport: true
-  }, 
+  },
 
- 
+
   watchSlidesProgress: true,
   watchSlidesVisibility: true,
   slideVisibleClass: "slide-visible",
@@ -326,15 +318,12 @@ const eventsSwiper = new Swiper('.events-slides-container', {
 
 })
 
-
-
 ymaps.ready(init);
 function init() {
   const mapElem = document.querySelector('map');
   const myMap = new ymaps.Map(
     "map",
     {
-
       center: [55.75846806898367, 37.60108849999989],
       zoom: 14,
       controls: ['geolocationControl', 'zoomControl'],
@@ -350,7 +339,6 @@ function init() {
     })
 
   myMap.behaviors.disable('scrollZoom');
-
   const myPlacemark = new ymaps.Placemark(
     [55.75846806898367, 37.60108849999989],
     {},
@@ -366,7 +354,6 @@ function init() {
   myMap.container.fitToViewport();
   ;
 };
-
 
 let phone = document.querySelector("input[type='tel']")
 var im = new Inputmask("+7 (999) 999-99-99")
@@ -391,5 +378,61 @@ new window.JustValidate('.contacts__form', {
       required: "Укажите ваш телефон",
       function: "Недостаточное количество символов"
     }
+    },
+
+    submitHandler: function (thisForm) {
+      let formData = new FormData(thisForm);
+
+      let xhr = new XMLHttpRequest();
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if (xhr.status === 200) {
+            console.log('Отправлено');
+          }
+        }
+      }
+
+      xhr.open('POST', 'mail.php', true);
+      xhr.send(formData);
+
+      thisForm.reset();
+    }
+  });
+
+// modal
+
+const link = document.querySelectorAll('.gallery-swiper-slide');
+const modalOverlay = document.querySelector('.gallery-modal-overlay ');
+const modals = document.querySelectorAll('.gallery-modal');
+
+link.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    let path = e.currentTarget.getAttribute('data-path');
+
+    modals.forEach((el) => {
+      el.classList.remove('gallery-modal--visible');
+    });
+
+    document.querySelector(`[data-target="${path}"]`).classList.add('gallery-modal--visible');
+    modalOverlay.classList.add('gallery-modal-overlay--visible');
+  });
+});
+
+modalOverlay.addEventListener('click', (e) => {
+  console.log(e.target);
+
+  if (e.target == modalOverlay) {
+    modalOverlay.classList.remove('gallery-modal-overlay--visible');
+    modals.forEach((el) => {
+      el.classList.remove('gallery-modal--visible');
+    });
   }
+});
+
+document.querySelectorAll(".modal-btn").forEach(element => {
+  element.addEventListener("click", function () {
+    document.querySelector(".gallery-modal").classList.remove("gallery-modal--visible");
+    document.querySelector(".gallery-modal-overlay").classList.remove("gallery-modal-overlay--visible");
+  })
 });

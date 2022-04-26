@@ -26,15 +26,15 @@
       <header class="header">
         <div class="header__top">
           <div class="container header__container flex">
-            <button class="nav__burger btn" aria-label="раскрыть меню">
-              <span class="nav__burger-line"></span>
-              <span class="nav__burger-line"></span>
-              <span class="nav__burger-line"></span>
+            <button class="header__burger btn" aria-label="раскрыть меню">
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
             </button>
             <div class="header__logo">
               <a class="header__logo-link " aria-label="логотип">
                 <picture>
-                  <source srcset="img/logo320.svg" media="(max-width: 661px)">
+                  <source srcset="img/logo320.svg" media="(max-width: 576px)">
                   <source srcset="img/logo1024.svg" media="(max-width: 1024px)">
                   <img src="img/logo.svg" alt="logo">
                 </picture>
@@ -68,7 +68,7 @@
                   <li class="nav__list-item text-style">
                     <a href="#contacts" class="nav__list-link "><span>Контакты</span></a>
                   </li>
-                  
+
 
                 </ul>
                 <div class="header__link text-style">
@@ -314,7 +314,7 @@
             </ul>
 
             <form action="/" class="header__form-bottom flex">
-              <button class="btn btn__search " type="button" aria-label="Кнопка поиска">
+              <button class="btn header__form-btn-search " type="button" aria-label="Кнопка поиска">
                 <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="6.8678" height="1.71695"
                     transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -328,7 +328,7 @@
           </div>
         </div>
       </header>
-      
+
       <section class="hero">
         <div class="container hero__container">
           <div class="hero__content">
@@ -346,7 +346,7 @@
         </div>
 
       </section>
-      <div class="swiper hero__swiper">
+      <div class="swiper hero-swiper">
         <div class="swiper-wrapper hero-swiper-wrapper">
           <div class="swiper-slide hero-swiper-slide hero-swiper-slide-1"></div>
           <div class="swiper-slide hero-swiper-slide hero-swiper-slide-2"></div>
@@ -371,8 +371,8 @@
       </section>
 
       <section class="section" id="gallery">
-        <div class="container gallery">
-          <div class="gallery-wrap">
+        <div class=" gallery">
+          <div class="gallery-wrap container">
             <div class="gallery__block">
               <h2 class="section__title gallery__title">Галерея</h2>
               <span class="gallery__select-name">Фильтр:</span>
@@ -383,21 +383,21 @@
               </select>
 
               <form class="form gallery__checkbox flex" name="checkbox" method="post" action="/">
-                <label class="checkbox__label">
-                  <input type="radio" class="checkbox__input" name="century" value="XIX">
-                  <span class="checkbox__choice">
+                <label class="gallery__checkbox-label">
+                  <input type="checkbox" class="gallery__checkbox-input" name="century" value="XIX">
+                  <span class="gallery__checkbox-choice">
                     XIX век
                   </span>
                 </label>
-                <label class="checkbox__label">
-                  <input type="radio" class="checkbox__input" name="century" value="XX" checked>
-                  <span class="checkbox__choice">
+                <label class="gallery__checkbox-label">
+                  <input type="checkbox" class="gallery__checkbox-input" name="century" value="XX" checked>
+                  <span class="gallery__checkbox-choice">
                     XX век
                   </span>
                 </label>
-                <label class="checkbox__label">
-                  <input type="radio" class="checkbox__input" name="century" value="today">
-                  <span class="checkbox__choice">
+                <label class="gallery__checkbox-label">
+                  <input type="checkbox" class="gallery__checkbox-input" name="century" value="today">
+                  <span class="gallery__checkbox-choice">
                     Современность
                   </span>
                 </label>
@@ -415,54 +415,177 @@
               <div class="swiper-container gallery-slides-container">
                 <div class="swiper-wrapper gallery-swiper-wrapper">
 
-                  <a href="#" class="swiper-slide gallery-swiper-slide gallery-swiper-slide-1">
+                  <a class="swiper-slide gallery-swiper-slide gallery-swiper-slide-1" data-path="gallery1">
                     <picture>
-                      <source srcset="img/gallery1-320.jpg" media="(max-width: 661px)">
+                      <source srcset="img/gallery1-320.jpg" media="(max-width: 576px)">
                       <source srcset="img/gallery1-768.jpg" media="(max-width: 768px)">
                       <source srcset="img/gallery1-1024.jpg" media="(max-width: 1200px)">
                       <img class="gallery-image" src="img/gallery1.jpg" alt="картина">
                     </picture>
                   </a>
-                  <a href="#" class="swiper-slide gallery-swiper-slide gallery-swiper-slide-2">
+                  <a class="swiper-slide gallery-swiper-slide gallery-swiper-slide-2" data-path="gallery2">
                     <picture>
-                      <source srcset="img/gallery2-320.jpg" media="(max-width: 661px)">
+                      <source srcset="img/gallery2-320.jpg" media="(max-width: 576px)">
                       <source srcset="img/gallery2-768.jpg" media="(max-width: 768px)">
                       <source srcset="img/gallery2-1024.jpg" media="(max-width: 1200px)">
                       <img class="gallery-image" src="img/gallery2.jpg" alt="картина">
                     </picture>
                   </a>
-                  <a href="#" class="swiper-slide gallery-swiper-slide gallery-swiper-slide-3">
+                  <a class="swiper-slide gallery-swiper-slide gallery-swiper-slide-3" data-path="gallery3">
                     <picture>
-                      <source srcset="img/gallery3-320.jpg" media="(max-width: 661px)">
+                      <source srcset="img/gallery3-320.jpg" media="(max-width: 576px)">
                       <source srcset="img/gallery3-768.jpg" media="(max-width: 768px)">
                       <source srcset="img/gallery3-1024.jpg" media="(max-width: 1200px)">
                       <img class="gallery-image" src="img/gallery3.jpg" alt="картина">
                     </picture>
                   </a>
-                  <a href="#" class="swiper-slide gallery-swiper-slide gallery-swiper-slide-4">
+                  <a class="swiper-slide gallery-swiper-slide gallery-swiper-slide-4" data-path="gallery4">
                     <picture>
-                      <source srcset="img/gallery4-320.jpg" media="(max-width: 661px)">
+                      <source srcset="img/gallery4-320.jpg" media="(max-width: 576px)">
                       <source srcset="img/gallery4-768.jpg" media="(max-width: 768px)">
                       <source srcset="img/gallery4-1024.jpg" media="(max-width: 1200px)">
                       <img class="gallery-image" src="img/gallery4.jpg" alt="картина">
                     </picture>
                   </a>
-                  <a href="#" class="swiper-slide gallery-swiper-slide gallery-swiper-slide-5">
+                  <a class="swiper-slide gallery-swiper-slide gallery-swiper-slide-5" data-path="gallery5">
                     <picture>
-                      <source srcset="img/gallery5-320.jpg" media="(max-width: 661px)">
+                      <source srcset="img/gallery5-320.jpg" media="(max-width: 576px)">
                       <source srcset="img/gallery5-768.jpg" media="(max-width: 768px)">
                       <source srcset="img/gallery5-1024.jpg" media="(max-width: 1200px)">
                       <img class="gallery-image" src="img/gallery5.jpg" alt="картина">
                     </picture>
                   </a>
-                  <a href="#" class="swiper-slide gallery-swiper-slide gallery-swiper-slide-6">
+                  <a class="swiper-slide gallery-swiper-slide gallery-swiper-slide-6" data-path="gallery6">
                     <picture>
-                      <source srcset="img/gallery1-320.jpg" media="(max-width: 661px)">
+                      <source srcset="img/gallery1-320.jpg" media="(max-width: 576px)">
                       <source srcset="img/gallery6-768.jpg" media="(max-width: 768px)">
                       <source srcset="img/gallery6-1024.jpg" media="(max-width: 1200px)">
                       <img class="gallery-image" src="img/gallery6.jpg" alt="картина">
                     </picture>
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-modals">
+            <div class="gallery-modal-overlay">
+              <div class="gallery-modal modal-1" data-target="gallery1">
+                <button class="btn modal-btn" aria-label="закрыть окно">
+                  <svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black" />
+                  </svg>
+                </button>
+                <img class="gallery-image modal-image" src="img/gallery1.jpg" alt="картина">
+                
+                <div class="modal-block">
+                  <h2 class="modal-capture">Художник Художник</h2>
+                  <h3 class="modal-name">"Название картины"</h3>
+                  <p class="modal-years">0000-0000</p>
+                  <p class="modal-descr"></p>
+                </div>
+              </div>
+
+              <div class="gallery-modal modal-2" data-target="gallery2">
+                <button class="btn modal-btn" aria-label="закрыть окно"><svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black" />
+                  </svg></button>
+               <img class="gallery-image modal-image" src="img/modal.jpg" alt="картина">
+                
+                <div class="modal-block">
+                  <h2 class="modal-capture">Казимир Малевич</h2>
+                  <h3 class="modal-name">"Женщина с граблями"</h3>
+                  <p class="modal-years">1931-1932</p>
+                  <p class="modal-descr">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник
+                    принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской
+                    и
+                    Варшавской выставок в 1927 году.</p>
+                </div>
+              </div>
+
+
+              <div class="gallery-modal modal-3" data-target="gallery3">
+                <button class="btn modal-btn" aria-label="закрыть окно"><svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black" />
+                  </svg></button>
+               <img class="gallery-image modal-image" src="img/gallery3.jpg" alt="картина">
+                
+                <div class="modal-block">
+                  <h2 class="modal-capture">Художник Художник</h2>
+                  <h3 class="modal-name">"Название картины"</h3>
+                  <p class="modal-years">0000-0000</p>
+                  <p class="modal-descr"></p>
+                </div>
+              </div>
+
+              <div class="gallery-modal modal-4" data-target="gallery4">
+                <button class="btn modal-btn" aria-label="закрыть окно"><svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black" />
+                  </svg></button>
+               <img class="gallery-image modal-image" src="img/gallery4.jpg" alt="картина">
+                
+                <div class="modal-block">
+                  <h2 class="modal-capture">Художник Художник</h2>
+                  <h3 class="modal-name">"Название картины"</h3>
+                  <p class="modal-years">0000-0000</p>
+                  <p class="modal-descr"></p>
+                </div>
+              </div>
+
+              <div class="gallery-modal modal-5" data-target="gallery5">
+                <button class="btn modal-btn" aria-label="закрыть окно"><svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black" />
+                  </svg></button>
+               <img class="gallery-image modal-image" src="img/gallery5.jpg" alt="картина">
+                
+                <div class="modal-block">
+                  <h2 class="modal-capture">Художник Художник</h2>
+                  <h3 class="modal-name">"Название картины"</h3>
+                  <p class="modal-years">0000-0000</p>
+                  <p class="modal-descr"></p>
+                </div>
+              </div>
+
+              <div class="gallery-modal modal-6" data-target="gallery6">
+                <button class="btn modal-btn" aria-label="закрыть окно"><svg width="16" height="16" viewBox="0 0 16 16"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666641 15.3044L15.3333 0.000153846L16 0.695801L1.33331 16L0.666641 15.3044Z" fill="black" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M0.666695 -0.000125032L15.3334 15.3041L14.6667 15.9998L2.70967e-05 0.695522L0.666695 -0.000125032Z"
+                      fill="black" />
+                  </svg></button>
+             <img class="gallery-image modal-image" src="img/gallery6.jpg" alt="картина">
+                
+                <div class="modal-block">
+                  <h2 class="modal-capture">Художник Художник</h2>
+                  <h3 class="modal-name">"Название картины"</h3>
+                  <p class="modal-years">0000-0000</p>
+                  <p class="modal-descr"></p>
                 </div>
               </div>
             </div>
@@ -484,7 +607,9 @@
 
             <div class="catalog__tabs-item" data-target="one1">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -492,7 +617,9 @@
 
             <div class="catalog__tabs-item" data-target="two2">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -500,7 +627,9 @@
 
             <div class="catalog__tabs-item" data-target="three3">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -508,7 +637,9 @@
 
             <div class="catalog__tabs-item" data-target="four4">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -516,7 +647,9 @@
 
             <div class="catalog__tabs-item" data-target="five5">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -524,7 +657,9 @@
 
             <div class="catalog__tabs-item" data-target="six">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -532,7 +667,9 @@
 
             <div class="catalog__tabs-item" data-target="seven">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -540,7 +677,9 @@
 
             <div class="catalog__tabs-item" data-target="eight">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -548,7 +687,9 @@
 
             <div class="catalog__tabs-item" data-target="nine">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -556,7 +697,9 @@
 
             <div class="catalog__tabs-item" data-target="ten">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -564,15 +707,19 @@
 
             <div class="catalog__tabs-item" data-target="eleven">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
             </div>
 
-            <div class="catalog__tabs-item tabs-item--active" data-target="twelve">
+            <div class="catalog__tabs-item catalog__tabs-item--active" data-target="twelve">
               <div class="catalog__tabs-img domenico"></div>
-              <h5 class="catalog__tabs-capture">Доменико Гирландайо</h5>
+              <p class="catalog__tabs-capture">
+                Доменико Гирландайо
+              </p>
               <p class="catalog__tabs-years">2 июня 1448 — 11 января 1494. </p>
               <p class="catalog__tabs-descr p-style">Один из ведущих флорентийских художников Кватроченто, основатель
                 художественной династии, которую продолжили его брат Давид и сын Ридольфо. Глава художественной
@@ -583,7 +730,9 @@
 
             <div class="catalog__tabs-item" data-target="thirteen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -591,7 +740,9 @@
 
             <div class="catalog__tabs-item" data-target="fourteen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -599,7 +750,9 @@
 
             <div class="catalog__tabs-item" data-target="fifteen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -607,7 +760,9 @@
 
             <div class="catalog__tabs-item" data-target="sixteen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -615,7 +770,9 @@
 
             <div class="catalog__tabs-item" data-target="seventeen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -623,7 +780,9 @@
 
             <div class="catalog__tabs-item" data-target="eighteen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -631,7 +790,9 @@
 
             <div class="catalog__tabs-item" data-target="nineteen">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -639,7 +800,9 @@
 
             <div class="catalog__tabs-item" data-target="twenty">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -647,7 +810,9 @@
 
             <div class="catalog__tabs-item" data-target="twenty-one">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -655,7 +820,9 @@
 
             <div class="catalog__tabs-item" data-target="twenty-two">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -663,7 +830,9 @@
 
             <div class="catalog__tabs-item" data-target="twenty-three">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
 
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
@@ -672,7 +841,9 @@
 
             <div class="catalog__tabs-item" data-target="twenty-four">
               <div class="catalog__tabs-img catalog__tabs-img-empty"></div>
-              <h5 class="catalog__tabs-capture">Что мы о нём знаем?</h5>
+              <p class="catalog__tabs-capture">
+                Что мы о нём знаем?
+              </p>
               <p class="catalog__tabs-descr p-style">Пока ничего... Зато мы точно знаем, что в галерее есть на что
                 посмотреть!</p>
               <a href="#gallery" class="catalog__accordion-tabs-link"><span>В галерею</span></a>
@@ -690,91 +861,91 @@
                   <ul class="list-reset catalog__accordion-tabs-list catalog__tabs-nav">
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
                       <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="one1"><span>Бенедетто
-                          ди Биндо</span></button>
+                          ди&nbsp;Биндо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="two2"><span>Бергоньоне,
-                          Амброджо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="two2"><span>Бергоньоне,&nbsp;Амброджо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="three3"><span>Биссоло,
-                          Франческо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="three3"><span>Биссоло,&nbsp;Франческо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="four4"><span>Больтраффио,
-                          Джованни</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="four4"><span>Больтраффио,&nbsp;Джованни</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="five5"><span>Бонсиньори,
-                          Франческо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="five5"><span>Бонсиньори,&nbsp;Франческо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="six"><span>Боттичини,
-                          Рафаэлло</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="six"><span>Боттичини,&nbsp;Рафаэлло</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
                       <button class="btn catalog-btn catalog__tabs-nav-btn"
                         data-path="seven"><span>Брамантино</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="eight"><span>Бреа,
-                          Людовико</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="eight"><span>Бреа,&nbsp;Людовико</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="nine"><span>Бьяджо д’Антонио
-                          Туччи</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="nine"><span>Бьяджо&nbsp;д’Антонио&nbsp;Туччи</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
                       <button class="btn catalog-btn catalog__tabs-nav-btn"
                         data-path="ten"><span>Веккьетта</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="eleven"><span>Андреа
-                          Верроккьо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="eleven"><span>Андреа&nbsp;Верроккьо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn tabs-nav-btn--active"
-                        data-path="twelve"><span>Доменико Гирландайо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn catalog__tabs-nav-btn--active"
+                        data-path="twelve"><span>Доменико&nbsp;Гирландайо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="thirteen"><span>Беноццо
-                          Гоццоли</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="thirteen"><span>Беноццо&nbsp;Гоццоли</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="fourteen"><span>Граначчи,
-                          Франческо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="fourteen"><span>Граначчи,&nbsp;Франческо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="fifteen"><span>Грегорио ди
-                          Чекко</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="fifteen"><span>Грегорио&nbsp;ди&nbsp;Чекко</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="sixteen"><span>Джованни да
-                          Удине</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="sixteen"><span>Джованни&nbsp;да&nbsp;Удине</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="seventeen"><span>Джованни ди
-                          Паоло</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="seventeen"><span>Джованни&nbsp;ди&nbsp;Паоло</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
                       <button class="btn catalog-btn catalog__tabs-nav-btn"
                         data-path="eighteen"><span>Джорджоне</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="nineteen"><span>Парентино,
-                          Бернардо</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="nineteen"><span>Парентино,&nbsp;Бернардо</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
                       <button class="btn catalog-btn catalog__tabs-nav-btn"
                         data-path="twenty"><span>Пезеллино</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="twenty-one"><span>Пьетро
-                          Перуджино</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="twenty-one"><span>Пьетро&nbsp;Перуджино</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
-                      <button class="btn catalog-btn catalog__tabs-nav-btn" data-path="twenty-two"><span>Перуцци,
-                          Бальдассаре</span></button>
+                      <button class="btn catalog-btn catalog__tabs-nav-btn"
+                        data-path="twenty-two"><span>Перуцци,&nbsp;Бальдассаре</span></button>
                     </li>
                     <li class="catalog__accordion-tabs-list-item catalog__tabs-nav-item">
                       <button class="btn catalog-btn catalog__tabs-nav-btn"
@@ -801,7 +972,9 @@
                     </svg>
                   </div>
                   <div class="catalog__accordion-bottom-descr">
-                    <h4 class="catalog__accordion-tabs-capture">Здесь пока пусто</h4>
+                    <p class="catalog__accordion-tabs-capture">
+                      Здесь пока пусто
+                    </p>
                     <p class="catalog__accordion-tabs-descr">А в галерее вы всегда можете найти что-то интересное для
                       себя
                     </p>
@@ -823,7 +996,9 @@
                     </svg>
                   </div>
                   <div class="catalog__accordion-bottom-descr">
-                    <h4 class="catalog__accordion-tabs-capture">Здесь пока пусто</h4>
+                    <p class="catalog__accordion-tabs-capture">
+                      Здесь пока пусто
+                    </p>
                     <p class="catalog__accordion-tabs-descr">А в галерее вы всегда можете найти что-то интересное для
                       себя
                     </p>
@@ -845,7 +1020,9 @@
                     </svg>
                   </div>
                   <div class="catalog__accordion-bottom-descr">
-                    <h4 class="catalog__accordion-tabs-capture">Здесь пока пусто</h4>
+                    <p class="catalog__accordion-tabs-capture">
+                      Здесь пока пусто
+                    </p>
                     <p class="catalog__accordion-tabs-descr">А в галерее вы всегда можете найти что-то интересное для
                       себя
                     </p>
@@ -867,7 +1044,9 @@
                     </svg>
                   </div>
                   <div class="catalog__accordion-bottom-descr">
-                    <h4 class="catalog__accordion-tabs-capture">Здесь пока пусто</h4>
+                    <p class="catalog__accordion-tabs-capture">
+                      Здесь пока пусто
+                    </p>
                     <p class="catalog__accordion-tabs-descr">А в галерее вы всегда можете найти что-то интересное для
                       себя
                     </p>
@@ -889,7 +1068,9 @@
                     </svg>
                   </div>
                   <div class="catalog__accordion-bottom-descr">
-                    <h4 class="catalog__accordion-tabs-capture">Здесь пока пусто</h4>
+                    <p class="catalog__accordion-tabs-capture">
+                      Здесь пока пусто
+                    </p>
                     <p class="catalog__accordion-tabs-descr">А в галерее вы всегда можете найти что-то интересное для
                       себя
                     </p>
@@ -912,7 +1093,9 @@
                   </div>
 
                   <div class="catalog__accordion-bottom-descr">
-                    <h4 class="catalog__accordion-tabs-capture">Здесь пока пусто</h4>
+                    <p class="catalog__accordion-tabs-capture">
+                      Здесь пока пусто
+                    </p>
                     <p class="catalog__accordion-tabs-descr">А в галерее вы всегда можете найти что-то интересное для
                       себя
                     </p>
@@ -936,7 +1119,6 @@
           <div class="swiper-container events-slides-container">
             <div class="swiper-wrapper events-swiper-wrapper">
               <div class="swiper-slide events-swiper-slide">
-
                 <div class="events__image">
                   <picture>
                     <source srcset="img/events-320-1.jpg" media="(max-width: 320px)">
@@ -955,10 +1137,9 @@
                     <button class="btn events__btn"><span>Подробнее</span></button>
                   </div>
                 </div>
-
               </div>
-              <div class="swiper-slide events-swiper-slide">
 
+              <div class="swiper-slide events-swiper-slide">
                 <div class="events__image">
                   <picture>
                     <source srcset="img/events-320-2.jpg" media="(max-width: 320px)">
@@ -976,10 +1157,9 @@
                     <button class="btn events__btn"><span>Подробнее</span></button>
                   </div>
                 </div>
-
               </div>
-              <div class="swiper-slide events-swiper-slide">
 
+              <div class="swiper-slide events-swiper-slide">
                 <div class="events__image">
                   <picture>
                     <source srcset="img/events-320-3.jpg" media="(max-width: 320px)">
@@ -997,10 +1177,9 @@
                     <button class="btn events__btn"><span>Подробнее</span></button>
                   </div>
                 </div>
-
               </div>
-              <div class="swiper-slide events-swiper-slide">
 
+              <div class="swiper-slide events-swiper-slide">
                 <div class="events__image">
                   <picture>
                     <source srcset="img/events-320-4.jpg" media="(max-width: 320px)">
@@ -1018,10 +1197,9 @@
                     <button class="btn events__btn"><span>Подробнее</span></button>
                   </div>
                 </div>
-
               </div>
-              <div class="swiper-slide events-swiper-slide">
 
+              <div class="swiper-slide events-swiper-slide">
                 <div class="events__image">
                   <picture>
                     <source srcset="img/events-320-5.jpg" media="(max-width: 320px)">
@@ -1039,6 +1217,7 @@
                     <button class="btn events__btn"><span>Подробнее</span></button>
                   </div>
                 </div>
+
 
               </div>
             </div>
@@ -1111,7 +1290,8 @@
                 <img src="img/projects-slide-1.svg" alt="freelands foundation" class="projects-swiper-slide-img">
               </a>
               <a href="#" class="swiper-slide projects-swiper-slide projects-swiper-slide-2">
-                <img src="img/projects-slide-2.svg" alt="Institute for Contamporary Arts" class="projects-swiper-slide-img">
+                <img src="img/projects-slide-2.svg" alt="Institute for Contamporary Arts"
+                  class="projects-swiper-slide-img">
               </a>
               <a href="#" class="swiper-slide projects-swiper-slide projects-swiper-slide-3">
                 <img src="img/projects-slide-3.svg" alt="Workhouse Arts center" class="projects-swiper-slide-img">
@@ -1129,7 +1309,8 @@
                 <img src="img/projects-slide-7.svg" alt="stassen" class="projects-swiper-slide-img">
               </a>
               <a href="#" class="swiper-slide projects-swiper-slide projects-swiper-slide-8">
-                <img src="img/projects-slide-8.svg" alt="watts gallery artists' village" class="projects-swiper-slide-img">
+                <img src="img/projects-slide-8.svg" alt="watts gallery artists' village"
+                  class="projects-swiper-slide-img">
               </a>
               <a href="#" class="swiper-slide projects-swiper-slide projects-swiper-slide-9">
                 <img src="img/projects-slide-9.svg" alt="esad" class="projects-swiper-slide-img">
@@ -1145,11 +1326,11 @@
         <div class="contacts__block">
           <div class="container contacts__container flex">
             <address class="contacts__address">
-              <p class="address__bold">Шоурум №4</p>
-              <p class="address__regular">Леонтьевский переулок, дом 5/1</p>
+              <p class="contacts__address-bold">Шоурум №4</p>
+              <p class="contacts__address-regular">Леонтьевский переулок, дом 5/1</p>
             </address>
 
-            <form class="contacts__form flex" action="https://jsonplaceholder.typicode.com/posts">
+            <form class="contacts__form flex" action="#" method="POST">
               <div class="contacts__input-block">
                 <input class="contacts__input" type="text" placeholder="Имя*" data-validate-field="name" name="name"
                   required>
@@ -1180,15 +1361,20 @@
                 <li class="contacts__list-item">
                   <a class="contacts__list-item-link" href="https://web.telegram.org/" aria-label="telegram">
                     <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z" fill="url(#paint0_linear_136320_64)"/>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z" fill="white"/>
+                      <path
+                        d="M20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40Z"
+                        fill="url(#paint0_linear_136320_64)" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.05312 19.7889L20.7167 14.7649C26.271 12.4547 27.425 12.0534 28.1773 12.0402C28.3428 12.0373 28.7127 12.0783 28.9523 12.2727C29.1547 12.4369 29.2103 12.6587 29.237 12.8143C29.2636 12.9699 29.2968 13.3246 29.2704 13.6017C28.9694 16.7641 27.667 24.4386 27.0045 27.9806C26.7241 29.4794 26.1725 29.9819 25.6377 30.0311C24.4762 30.138 23.5943 29.2635 22.4694 28.5261L18.006 25.528C16.0314 24.2268 17.3114 23.5116 18.4368 22.3428C18.7313 22.0368 23.8486 17.3823 23.9476 16.96C23.9596 16.9072 23.9715 16.7104 23.8546 16.6064C23.7376 16.5024 23.565 16.5384 23.4404 16.5663C23.2639 16.6064 20.4519 18.465 15.0044 22.1423C14.2062 22.6904 13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z"
+                        fill="white" />
                       <defs>
-                      <linearGradient id="paint0_linear_136320_64" x1="20" y1="0" x2="20" y2="39.7033" gradientUnits="userSpaceOnUse">
-                      <stop offset="0" stop-color="#2AABEE"/>
-                      <stop offset="1" stop-color="#229ED9"/>
-                      </linearGradient>
+                        <linearGradient id="paint0_linear_136320_64" x1="20" y1="0" x2="20" y2="39.7033"
+                          gradientUnits="userSpaceOnUse">
+                          <stop offset="0" stop-color="#2AABEE" />
+                          <stop offset="1" stop-color="#229ED9" />
+                        </linearGradient>
                       </defs>
-                      </svg>                      
+                    </svg>
                   </a>
                 </li>
               </ul>
