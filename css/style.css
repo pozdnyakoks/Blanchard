@@ -1607,6 +1607,7 @@ button {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .gallery__checkbox-label {
@@ -1884,7 +1885,7 @@ button {
 
 .gallery__modal-overlay {
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1898,8 +1899,10 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+ height: 100vh;
   width: 100%;
+  /* overflow-y: auto; */
+  background-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1917,7 +1920,11 @@ button {
       -ms-flex-pack: end;
           justify-content: end;
   display: none;
-  min-height: 500px; 
+  
+  overflow-y: auto;
+  height: 90vh;
+  max-height: 500px;
+  /* min-height: 456px;  */
   width: 900px;
   background-color: var(--text-color);
   -webkit-box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.8);
@@ -1925,6 +1932,7 @@ button {
 }
 
 .gallery__modal-overlay--visible {
+
   opacity: 1;
   visibility: visible;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1962,13 +1970,14 @@ button {
 }
 
 .modal-image {
-  height: 100%;
+  height: 500px;
   width: 44.5%;
 }
 
 .modal-block {
-  padding: 25px 49px 15px 49px;
+  padding: 122px 49px 15px 49px;
   width: 55.5%;
+  height: 100%;
 }
 
 .modal-capture {
@@ -3034,6 +3043,7 @@ img.events__img {
   border-radius: 100px;
   width: 100%;
   min-height: 50px;
+  line-height: 1;
   background-color: var(--text-color);
   -webkit-transition: background-color .3s ease;
   -o-transition: background-color .3s ease;
@@ -3658,17 +3668,9 @@ img.events__img {
   }
 
   .gallery__slides-container {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
   }
 
-  /* .gallery__swiper-wrapper {
-     padding-top: 30px;
-    padding-bottom: 20px;
-  } */
-
-  /* .gallery__swiper-slide {
-    margin-bottom: 30px;
-  } */
 
   .gallery__swiper-slide::before {
     padding-top: calc(127.4% - 6px);
@@ -3684,7 +3686,7 @@ img.events__img {
 
   .gallery__modal {
     width: 290px;
-    min-height: 600px;
+    max-height: 600px;
   }
   
   .modal-btn {
@@ -3699,6 +3701,7 @@ img.events__img {
   }
 
   .modal-block {
+    
     width: 100%;
     padding: 214px 21px 21px 19px;
   }
@@ -3730,7 +3733,6 @@ img.events__img {
 
   .modal-block {
     width: 100%;
-    padding: 214px 21px 21px 19px;
   }
 
   .modal-capture {
@@ -3995,6 +3997,7 @@ img.events__img {
     margin-bottom: 19px;
     padding: 10.5px 33px 9.5px 24px;
     min-height: 40px;
+    
   }
 
   .js-validate-error-label {
@@ -4364,7 +4367,7 @@ img.events__img {
 
   .gallery__modal {
     width: 87%;
-    min-height: 594px;
+    max-height: 594px;
   }
 
   .modal-btn {
@@ -4374,10 +4377,10 @@ img.events__img {
 
   .modal-image {
     width: 45.1%;
+    height: 594px;
   }
 
   .modal-block {
-    padding: 24px 49px 15px 49px;
     width: 54.9%;
   }
 
@@ -4854,13 +4857,13 @@ img.events__img {
     margin-right: 18px;
   }
 
-  .gallery__modal {
-    width: 594px;
-    min-height: 594px;
+  .modal-image  {
+    height: 594px;
   }
 
-  .modal-block {
-    padding: 62px 49px 15px 49px;
+  .gallery__modal {
+    width: 594px;
+    max-height: 594px;
   }
 
   .modal-years {

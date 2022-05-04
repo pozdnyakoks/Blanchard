@@ -57,33 +57,30 @@ const heroSwiper = new Swiper(".hero-swiper", {
   }
 });
 
-let nav = document.querySelector(".nav");
-let body = document.querySelector("body");
-let headerForm = document.querySelector(".header__form");
 
 document.querySelector(".header__burger").addEventListener("click", function () {
-  nav.classList.add("active");
-  body.classList.add("active");
+  document.querySelector(".nav").classList.add("active");
+  document.querySelector("body").classList.add("active");
 })
-
 document.querySelector(".header__nav-close").addEventListener("click", function () {
-  nav.classList.remove("active");
-  body.classList.remove("active");
+  document.querySelector(".nav").classList.remove("active");
+  document.querySelector("body").classList.remove("active");
 })
 
 document.querySelectorAll(".nav__list-item").forEach(element => {
   element.addEventListener("click", function () {
-    nav.classList.remove("active");
-    body.classList.remove("active");
+    document.querySelector(".nav").classList.remove("active");
+    document.querySelector("body").classList.remove("active");
   })
 });
 
 document.querySelector(".header__btn-open").addEventListener("click", function () {
-  headerForm.classList.add("active");
+  document.querySelector(".header__form").classList.add("active");
 })
 
+
 document.querySelector(".header__btn-close").addEventListener("click", function () {
-  headerForm.classList.remove("active");
+  document.querySelector(".header__form").classList.remove("active");
 })
 
 const element = document.querySelector('.gallery__select');
@@ -419,6 +416,7 @@ link.forEach((el) => {
 
     document.querySelector(`[data-target="${path}"]`).classList.add('gallery__modal--visible');
     modalOverlay.classList.add('gallery__modal-overlay--visible');
+    document.querySelector("body").classList.add("active");
   });
 });
 
@@ -429,6 +427,7 @@ modalOverlay.addEventListener('click', (e) => {
     modalOverlay.classList.remove('gallery__modal-overlay--visible');
     modals.forEach((el) => {
       el.classList.remove('gallery__modal--visible');
+      document.querySelector("body").classList.remove("active");
     });
   }
 });
@@ -437,5 +436,11 @@ document.querySelectorAll(".modal-btn").forEach(element => {
   element.addEventListener("click", function () {
     document.querySelector(".gallery__modal").classList.remove("gallery__modal--visible");
     document.querySelector(".gallery__modal-overlay").classList.remove("gallery__modal-overlay--visible");
+    document.querySelector("body").classList.remove("active");
   })
 });
+
+// document.querySelector(".header__burger").addEventListener("click", function () {
+//   document.querySelector(".nav").classList.add("active");
+//   document.querySelector("body").classList.add("active");
+// })
