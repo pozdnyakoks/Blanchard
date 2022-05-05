@@ -125,6 +125,11 @@ button {
     fill: var(--hover-color);
   }
 
+  .header__link-login:hover .header__link-wrap {
+    margin-left: -4px;
+    padding-left: 4px;
+  }
+
   .header__list-item-btn:not(.is-active):hover:not(:focus-visible) {
     color: var(--hover-color2);
   }
@@ -422,7 +427,7 @@ button {
 }
 
 .nav {
-  padding-bottom: 6px;
+  padding-bottom: 3px;
   width: 78%;
 }
 
@@ -507,10 +512,19 @@ button {
 
 .header__link-login {
   position: relative;
+
   color: var(--text-color);
   -webkit-transition: color .3s ease, border-color .3s ease, background-color .3s ease;
   -o-transition: color .3s ease, border-color .3s ease, background-color .3s ease;
   transition: color .3s ease, border-color .3s ease, background-color .3s ease;
+}
+
+.header__link-wrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  transition-property: margin-left, padding-left;
+  transition-duration: .3s;
 }
 
 .header__link-login>* {
@@ -518,7 +532,8 @@ button {
 }
 
 .header__link-login svg {
-  margin-right: 3px;
+margin-left: -4px;
+margin-bottom: 2px;
 }
 
 .header__link-login path {
@@ -570,6 +585,11 @@ button {
 
 .header__link-login:active:not(:focus-visible) path {
   fill: var(--active-color);
+}
+
+.header__link-login:active .header__link-wrap {
+  margin-left: -4px;
+  padding-left: 4px;
 }
 
 .header__btn-search {
