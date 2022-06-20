@@ -1,2 +1,2 @@
 # Blanchard
-https://pozdnyakoks.github.io/Blanchard/
+https://blanchard.github.io/
