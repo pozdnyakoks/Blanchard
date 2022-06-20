@@ -1,2 +1,3 @@
 # Blanchard
-https://blanchard.github.io/
+skillbox diploma project
+https://pozdnyakoks.github.io/blanchard/
